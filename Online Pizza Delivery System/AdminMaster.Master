@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="Online_Pizza_Delivery_System.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    
+
+    <%--bootstrap css--%>
+    <link href="bootstrapping/css/bootstrap.min.css" rel="stylesheet" />
+
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--customstylesheet--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <%--jquery--%>
+    <script src="bootstrapping/js/jquery-3.3.1.slim.min.js"></script>
+
+    <%--popper js--%>
+    <script src="bootstrapping/js/popper.min.js"></script>
+
+    <%--bootstrap js--%>
+    <script src="bootstrapping/js/bootstrap.min.js"></script>
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+
+
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <asp:image runat="server" imageurl="Images/Homepage/1.jpg" width="100" height="100" />
+                   
+                    Pizza Express
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="AdminHomepage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="About.aspx">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Terms.aspx">Terms</a>
+                        </li>
+
+                      
+
+                    </ul>
+
+                     &nbsp;
+                     &nbsp;
+                     <div class="d-flex">
+                         <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search" size="150"><br>
+                         &nbsp;
+                         <button class="btn btn-outline-success" type="submit">Search</button><br>
+
+                     </div>
+                     &nbsp;
+                     &nbsp;
+
+                     <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" Visible="False">Hello Admin</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" >Menu</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" >Login</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Visible="False" >Logout</asp:LinkButton>
+                        </li>
+                       
+                          
+                    </ul>
+                   </div>
+    
+                </div>
+
+
+            </nav>
+        </div>
+
+
+        <!-- Main Content Placeholder -->
+        <div>
+            
+                     
+            
+            <form>
+            
+                        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                <form  runat="server">
+
+                </form>
+            </asp:ContentPlaceHolder>
+       
+        <div>
+       
+        </div>
+        <!-- Main Content Placeholder -->
+
+         <!-- Footer -->
+        <footer>
+            <br><br><div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click"  >Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" Visible="False" OnClick="LinkButton6_Click" >Customer Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click" >Customer Details</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" Visible="False" OnClick="LinkButton8_Click" >Food Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" Visible="False" OnClick="LinkButton9_Click" >Order Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" Visible="False" OnClick="LinkButton10_Click" >Order Details</asp:LinkButton>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+    </footer>
+
+            
+
+   
+
+               
+    </form>
+
+        
+
+   
+</div>
+      
+
+
+    </form>
+
+
+</body>
+</html>
